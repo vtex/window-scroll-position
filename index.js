@@ -15,10 +15,12 @@ try {
   window.removeEventListener('testPassive', null, opts)
 } catch (e) {}
 
-var getPosition = () => ({
-  x: window.pageXOffset,
-  y: window.pageYOffset,
-})
+var getPosition = function() {
+  return {
+    x: window.pageXOffset,
+    y: window.pageYOffset,
+  }
+}
 
 var defaultOptions = {
   throttle: 100,
