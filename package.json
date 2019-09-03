@@ -1,6 +1,6 @@
 {
   "name": "@vtexlab/window-scroll-position",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React hook for Window scroll position",
   "main": "index.js",
   "repository": "https://github.com/vtex/window-scroll-position",
