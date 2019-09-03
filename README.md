@@ -1,5 +1,7 @@
 # `@rehooks/window-scroll-position`
 
+**This is a fix for the library for exito.com. It changes `let` to `var` to support older browsers.**
+
 > React hook for [Window](https://developer.mozilla.org/en-US/docs/Web/API/Window) scroll position
 
 > **Note:** This is using the new [React Hooks API Proposal](https://reactjs.org/docs/hooks-intro.html)
