@@ -1,9 +1,9 @@
 {
-  "name": "@rehooks/window-scroll-position",
-  "version": "1.0.1",
+  "name": "@vtexlab/window-scroll-position",
+  "version": "1.0.2",
   "description": "React hook for Window scroll position",
   "main": "index.js",
-  "repository": "https://github.com/rehooks/window-scroll-position",
+  "repository": "https://github.com/vtex/window-scroll-position",
   "author": "Pave Prichodko",
   "license": "MIT",
   "publishConfig": {
