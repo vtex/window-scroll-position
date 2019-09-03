@@ -1,5 +1,7 @@
 'use strict'
-var { useState, useEffect } = require('react')
+var React = require('react')
+var useState = React.useState
+var useEffect = React.useEffect
 var _throttle = require('lodash.throttle')
 
 var supportsPassive = false
