@@ -30,8 +30,8 @@ function useWindowScrollPosition(options) {
   var opts = Object.assign({}, defaultOptions, options)
 
   var state = useState(getPosition())
-  var position = state.position
-  var setPosition = state.setPosition
+  var position = state[0]
+  var setPosition = state[1]
 
   useEffect(function() {
     var handleScroll = _throttle(function() {
