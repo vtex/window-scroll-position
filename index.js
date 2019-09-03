@@ -27,10 +27,12 @@ var defaultOptions = {
 function useWindowScrollPosition(options) {
   var opts = Object.assign({}, defaultOptions, options)
 
-  var [position, setPosition] = useState(getPosition())
+  var state = useState(getPosition())
+  var position = state.position
+  var setPosition = state.setPosition
 
-  useEffect(() => {
-    var handleScroll = _throttle(() => {
+  useEffect(function() {
+    var handleScroll = _throttle(function() {
       setPosition(getPosition())
     }, opts.throttle)
 
@@ -40,7 +42,7 @@ function useWindowScrollPosition(options) {
       supportsPassive ? { passive: true } : false
     )
 
-    return () => {
+    return function() {
       handleScroll.cancel()
       window.removeEventListener('scroll', handleScroll)
     }
