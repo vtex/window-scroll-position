@@ -1,8 +1,8 @@
 'use strict'
-let { useState, useEffect } = require('react')
-let _throttle = require('lodash.throttle')
+var { useState, useEffect } = require('react')
+var _throttle = require('lodash.throttle')
 
-let supportsPassive = false
+var supportsPassive = false
 try {
   var opts = Object.defineProperty({}, 'passive', {
     get: function() {
@@ -13,22 +13,22 @@ try {
   window.removeEventListener('testPassive', null, opts)
 } catch (e) {}
 
-let getPosition = () => ({
+var getPosition = () => ({
   x: window.pageXOffset,
   y: window.pageYOffset,
 })
 
-let defaultOptions = {
+var defaultOptions = {
   throttle: 100,
 }
 
 function useWindowScrollPosition(options) {
-  let opts = Object.assign({}, defaultOptions, options)
+  var opts = Object.assign({}, defaultOptions, options)
 
-  let [position, setPosition] = useState(getPosition())
+  var [position, setPosition] = useState(getPosition())
 
   useEffect(() => {
-    let handleScroll = _throttle(() => {
+    var handleScroll = _throttle(() => {
       setPosition(getPosition())
     }, opts.throttle)
 
@@ -48,3 +48,4 @@ function useWindowScrollPosition(options) {
 }
 
 module.exports = useWindowScrollPosition
+
